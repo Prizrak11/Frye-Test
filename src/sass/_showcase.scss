@@ -1,0 +1,42 @@
+.showcase {
+	background: url(//cdn.shopify.com/s/files/1/0140/3371/5254/files/shop-boots-background_1280x.jpg?v=1634061943) no-repeat;
+	background-size: cover;
+	background-position: top center;
+	background-color: $color-accent;
+	width: 100%;
+	padding-block: 5em;
+	padding-inline: 11em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	gap: 2.5em;
+	&__section {
+		position: relative;
+		width: 100%;
+		&__text {
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: $color-accent;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-family: Druk Wide;
+			p {
+				font-family: inherit;
+				font-size: 0.9em;
+				letter-spacing: 0;
+			}
+			h2 {
+				text-decoration: underline;
+				font-size: 2em;
+				line-height: 1.2em;
+			}
+		}
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}

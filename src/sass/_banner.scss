@@ -1,0 +1,43 @@
+.banner {
+	position: relative;
+	display: flex;
+	&__text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: $color-accent;
+		font-family: $font-secun;
+		text-transform: uppercase;
+		p {
+			font-family: inherit;
+			color: inherit;
+		}
+		h1 {
+			font-size: 10em;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: $color-accent;
+		}
+		input {
+			margin-top: 2em;
+			background-color: transparent;
+			text-transform: uppercase;
+			font-family: $font-main;
+			border: 1px solid $color-accent;
+			color: inherit;
+			font-size: 0.95em;
+			padding-block: 1em;
+			padding-inline: 2em;
+			cursor: pointer;
+			&:hover {
+				background-color: $color-accent;
+				color: $color-main;
+			}
+		}
+	}
+	img {
+		width: 100%;
+	}
+}

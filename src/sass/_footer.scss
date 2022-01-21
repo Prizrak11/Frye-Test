@@ -1,0 +1,77 @@
+.footer {
+	background-color: $color-extra;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-inline: 12em;
+	padding-block-start: 3.5em;
+	padding-block-end: 4em;
+	row-gap: 3em;
+	&__menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.5em;
+		li {
+			padding-block: 0.8em;
+			a {
+				cursor: pointer;
+				color: $color-accent;
+			}
+		}
+	}
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		margin-inline: 4em;
+		justify-content: space-between;
+		&__main {
+			border-bottom: 1px solid transparentize($color: $color-accent, $amount: 0.6);
+			p {
+				color: $color-accent;
+				font-weight: 500;
+			}
+			form {
+				input {
+					border: none;
+					margin-block: 1em;
+					font-size: 1em;
+					padding-inline: 0.5em;
+					background-color: $color-extra;
+				}
+			}
+		}
+		&__social {
+			i {
+				font-size: 1.3em;
+				color: $color-accent;
+				padding-inline: 0.7em;
+			}
+		}
+	}
+	&__end {
+		grid-column: 1 / 3;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.8em;
+		margin-top: 1em;
+		&__links {
+			display: flex;
+			list-style: none;
+			li {
+				font-size: 12px;
+				padding-inline: 1em;
+				a {
+					color: transparentize($color: $color-accent, $amount: 0.5);
+				}
+			}
+		}
+		p {
+			padding-top: 1em;
+			font-size: 0.9em;
+			letter-spacing: 0.05em;
+			color: transparentize($color: $color-accent, $amount: 0.5);
+		}
+	}
+}

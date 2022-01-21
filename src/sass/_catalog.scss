@@ -1,0 +1,30 @@
+.catalog {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: $color-third;
+	& > h2 {
+		@include SubTitle;
+	}
+	&__products {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		&__product {
+			padding: 2.5em;
+			img {
+				width: 100%;
+			}
+			.text {
+				text-align: center;
+				& > * {
+					padding-block: 0.2em;
+				}
+				.price {
+					&::before {
+						content: '$';
+					}
+				}
+			}
+		}
+	}
+}

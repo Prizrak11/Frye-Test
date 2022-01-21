@@ -1,0 +1,22 @@
+.top-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	font-variant-caps: all-small-caps;
+	padding-block: 0.5em;
+	padding-inline: 5%;
+	p {
+		text-align: center;
+		letter-spacing: 0.05em;
+		font-size: 0.9em;
+	}
+	&__extra {
+		display: flex;
+		align-items: center;
+		justify-self: center;
+		img {
+			height: 1.2em;
+			padding-right: 1em;
+		}
+	}
+}

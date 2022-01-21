@@ -1,0 +1,31 @@
+//! Sweet Sans - Main font
+@font-face {
+	font-family: Sweet Sans;
+	src: url(../static/SweetSans-Regular.otf);
+}
+@font-face {
+	font-family: Sweet Sans;
+	font-weight: bold;
+	src: url(../static/SweetSans-Bold.otf);
+}
+@font-face {
+	font-family: Sweet Sans;
+	font-weight: 500;
+	src: url(../static/SweetSans-Medium.otf);
+}
+
+//! Druk Wide - Secondary Font
+@font-face {
+	font-family: Druk Wide;
+	src: url(../static/DrukWide-Medium-Web.woff);
+}
+@font-face {
+	font-family: Druk Wide;
+	src: url(../static/DrukWide-Bold-Web.woff);
+	font-weight: bold;
+}
+@font-face {
+	font-family: Druk Wide;
+	src: url(../static/DrukWide-Heavy-Web.woff);
+	font-weight: bolder;
+}
