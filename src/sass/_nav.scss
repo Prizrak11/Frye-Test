@@ -16,14 +16,15 @@
 	&__menu {
 		display: flex;
 		align-self: stretch;
-		li {
+		&__item {
+			display: relative;
 			font-variant-caps: all-small-caps;
 			text-align: center;
 			padding-inline: 0.8em;
 			font-weight: 500;
 			font-size: 1.3em;
 			cursor: pointer;
-			a {
+			.title {
 				display: flex;
 				height: 100%;
 				align-items: center;
@@ -32,6 +33,56 @@
 					color: $color-secun;
 					border-bottom: 3px solid $color-secun;
 				}
+			}
+			.dropdown {
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+				transition: all 0.5s ease;
+				left: 0;
+				display: none;
+				//Content
+				background-color: #fff;
+				width: 100%;
+				padding-block: 2em;
+				padding-block-end: 3em;
+				padding-inline: 10em;
+				.items {
+					display: flex;
+					text-align: start;
+					column-gap: 1.5em;
+					& > ul > li {
+						padding-block: 0.5em;
+						font-size: 1rem;
+						font-variant-caps: normal;
+						text-transform: capitalize;
+						font-weight: 200;
+						&.subtitle {
+							font-weight: bolder;
+							padding-bottom: 0.5em;
+							font-size: 1.4rem;
+							font-variant-caps: all-small-caps;
+							text-transform: uppercase;
+						}
+					}
+				}
+				.image {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: start;
+					h3 {
+						font-size: 1.1em;
+					}
+				}
+			}
+			&:hover > .dropdown,
+			&:focus-within > .dropdown,
+			.dropdown:hover {
+				visibility: visible;
+				opacity: 1;
+				display: flex;
+				justify-content: space-evenly;
 			}
 		}
 	}
