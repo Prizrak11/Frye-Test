@@ -7,12 +7,17 @@
 		@include SubTitle;
 	}
 	&__products {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		width: 100%;
+		white-space: nowrap;
 		&__product {
+			display: inline-block;
+			scroll-snap-align: start;
 			padding: 2.5em;
+			width: 25%;
 			img {
-				width: 100%;
+				max-width: 100%;
 			}
 			.text {
 				text-align: center;

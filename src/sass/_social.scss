@@ -13,18 +13,41 @@
 		}
 	}
 	&__images {
-		position: relative;
-		display: flex;
 		width: 100%;
-		overflow: auto;
-		overflow-y: hidden;
 		padding-block: 1em;
-		img {
-			aspect-ratio: 1/1;
-			object-fit: cover;
-			max-width: 25%;
-			padding-inline: 0.3em;
-			border-radius: 0.5em;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		white-space: nowrap;
+		a {
+			scroll-snap-align: center;
+			display: inline-block;
+			position: relative;
+			width: 25%;
+			margin-inline: 0.3em;
+			color: transparent;
+			img {
+				aspect-ratio: 1/1;
+				object-fit: cover;
+				border-radius: 0.5em;
+				width: 100%;
+			}
+			&::before {
+				font-family: 'Font Awesome 5 Brands';
+				content: '\f16d';
+				font-weight: 900;
+				position: absolute;
+				display: grid;
+				place-items: center;
+				font-size: 2em;
+				height: 100%;
+				width: 100%;
+				border-radius: 0.5rem;
+				background-color: transparent;
+			}
+			&:hover::before {
+				color: $color-extra;
+				background-color: rgba($color: #fff, $alpha: 0.7);
+			}
 		}
 	}
 }
